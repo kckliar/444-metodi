@@ -1,0 +1,83 @@
+1.2
+1)
+x=linspace(1,100,100);
+mono=sqrt(x);
+x_val=[1;4;9;16;25;36;81;100]
+y_val= sqrt(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,mono,'r--');
+err=abs(mono-fx2');
+errSKO=sqrt(sum((err/(max(mono)-min(mono))).^2)/100)
+errMAX=max(err/(max(mono)-min(mono)))
+
+errSKO =
+
+    0.6331
+
+
+errMAX =
+
+    1.6198
+    
+2)
+x=linspace(1,100,100);
+mono=log(x);
+x_val=[1;4;9;16;25;36;81;100]
+y_val= log(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,mono,'r--');
+err=abs(mono-fx3');
+errSKO=sqrt(sum((err/(max(mono)-min(mono))).^2)/100)
+errMAX=max(err/(max(mono)-min(mono)))
+
+errSKO =
+
+    3.7475
+
+
+errMAX =
+
+    9.5670
+3)
+x=linspace(1,100,100);
+glad=tan(x);
+x_val=[1;4;9;16;25;36;81;100]
+y_val= tan(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,glad,'r--');
+err=abs(glad-fx4');
+errSKO=sqrt(sum((err/(max(glad)-min(glad))).^2)/100)
+errMAX=max(err/(max(glad)-min(glad)))
+
+errSKO =
+
+    0.7825
+
+
+errMAX =
+
+    1.8347
+   
+4)
+x=linspace(1,100,100);
+glad=cos(x);
+x_val=[1;4;9;16;25;36;81;100]
+y_val= cos(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,glad,'r--');
+err=abs(glad-fx6');
+errSKO=sqrt(sum((err/(max(glad)-min(glad))).^2)/100)
+errMAX=max(err/(max(glad)-min(glad)))
+
+errSKO =
+
+   41.0617
+
+
+errMAX =
+
+   99.4559
