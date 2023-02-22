@@ -81,6 +81,28 @@ errSKO =
 errMAX =
 
    99.4559
+   
+5)
+
+x=linspace(1,100,100);
+neglad=sign(x);
+x_val=[1;4;9;16;25;36;81;100]
+y_val= sign(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,neglad,'r--');
+err=abs(neglad-fx1');
+errSKO=sqrt(sum((err/(max(neglad)-min(neglad))).^2)/100)
+errMAX=max(err/(max(neglad)-min(neglad)))
+
+errSKO =
+
+   NaN
+
+
+errMAX =
+
+   Inf
  
 1.3)
 
