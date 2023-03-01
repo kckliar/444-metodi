@@ -1,0 +1,23 @@
+1. 
+x=linspace(1,100,100);
+bez=sqrt(x);
+x_val=linspace(1,100,16)
+y_val= sqrt(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,mono,'r--');
+err=abs(mono-fx');
+errSKO=sqrt(sum((err/(max(mono)-min(mono))).^2)/100)
+errMAX=max(err/(max(mono)-min(mono)))
+
+50 точек
+errSKO =
+
+    0.0017
+
+
+errMAX =
+
+    0.0064
+    
+
