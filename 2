@@ -42,3 +42,53 @@ errSKO =
 errMAX =
 
     0.0377
+    
+3.
+x=linspace(1,100,100);
+extr=sin(x);;
+x_val=linspace(1,100,50)
+y_val= sin(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,extr,'r--');
+err=abs(extr-fx');
+errSKO=sqrt(sum((err/(max(extr)-min(extr))).^2)/100)
+errMAX=max(err/(max(extr)-min(extr)))
+
+
+100 tochek
+
+errSKO =
+
+    0.3494
+
+
+errMAX =
+
+    0.5452
+
+4.
+x=linspace(1,100,100);
+extr=cos(x);;
+x_val=linspace(1,100,50)
+y_val= cos(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,extr,'r--');
+err=abs(extr-fx');
+errSKO=sqrt(sum((err/(max(extr)-min(extr))).^2)/100)
+errMAX=max(err/(max(extr)-min(extr)))
+
+
+
+100 tochek
+errSKO =
+
+    0.3523
+
+
+errMAX =
+
+    0.5162
+
+
