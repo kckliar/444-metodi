@@ -20,4 +20,25 @@ errMAX =
 
     0.0064
     
+2.
+x=linspace(1,100,100);
+bez=log(x);;
+x_val=linspace(1,100,16)
+y_val= log(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,bez,'r--');
+err=abs(bez-fx');
+errSKO=sqrt(sum((err/(max(bez)-min(bez))).^2)/100)
+errMAX=max(err/(max(bez)-min(bez)))
 
+
+50 njxtr
+errSKO =
+
+    0.0093
+
+
+errMAX =
+
+    0.0377
