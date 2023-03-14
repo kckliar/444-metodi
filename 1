@@ -121,3 +121,18 @@ plot(x_val,y_val,'ro',x_valCH,y_valCH,'bo')
 grid on
 hold on
 plot(x,y,'r--')
+
+
+
+1.2 
+
+x=linspace(1,100,100);
+mono=sqrt(x) - exp(x);
+x_val=[1;11;4;35;41;88]
+y_val= sqrt(x_val) - exp(x_val);
+plot(x_val,y_val,'ro') 
+hold on
+plot(x,mono,'r--');
+err=abs(mono-y1');
+errSKO=sqrt(sum((err/(max(mono)-min(mono))).^2)/100)
+errMAX=max(err/(max(mono)-min(mono)))
