@@ -34,3 +34,13 @@ for i = 1:n-1
  s = s + f(x);
 end
 I2 = h*(s+0.5*f(x1)+0.5*f(x2))
+
+1.2 
+m1 = max(f'(x))
+[a;b]
+
+n>M1(b-a)^2/(2epselun) 
+M1(b-a)^2/(2epselun) = 972255
+h=(b-a)/n
+
+
