@@ -2,3 +2,20 @@ a_good = [9 1 2;2 1 9; 1 2 9];
 x_good = cond(a_good)
 a_bad = [1 2 3; 4 5 6; 7 8 9];
 x_bad = cond(a_bad)
+
+%%%
+
+n=3;
+for i=1:n
+    for j=1:n
+        a1(i,j)=sin(i*j/(2*n));
+    end
+end
+c1=cond(a1);
+x10=[1;1;1];
+b1=a1*x10;
+x1=a1\b1;
+
+r1=a1*x1-b1;
+err1=norm(x1-x10)/norm(x10)
+err_est1=cond(a1)*norm(r1)/norm(b1);
