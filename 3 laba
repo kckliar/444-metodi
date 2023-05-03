@@ -19,3 +19,18 @@ x1=a1\b1;
 r1=a1*x1-b1;
 err1=norm(x1-x10)/norm(x10)
 err_est1=cond(a1)*norm(r1)/norm(b1);
+
+
+
+
+%%%%
+a=[1, 5, 7; 2, 7, 2; 9, 0, 1]
+
+c=cond(a)
+x0=[1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;];
+b=a*x0;
+x=a\b
+r=a*x-b;
+err=norm(x-x0)/norm(x0)
+xJ=Jakobi(a,b,0.0001)
+errJ=norm(xJ-x0)/norm(x0)
